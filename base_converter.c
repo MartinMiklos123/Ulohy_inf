@@ -36,9 +36,7 @@ void convertToDif(int base2, int num, int base1){
         if (number < base2){
             digits[i] = number;
             break;
-
         }
-
     }
 
     printf("CONVERTED FROM BASE %i TO BASE %i = ", base1, base2);
@@ -46,23 +44,17 @@ void convertToDif(int base2, int num, int base1){
     for(int k = i; k >= 0; k--){
         if(digits[k] >= 10){
             printf("%c", 55 + digits[k]);
-
-
         }
         else{
             printf("%i", digits[k]);
-
         }
-
     }
 
 }
 
-
 int64_t convertToDecimal(int base, const char num[]){
     int64_t finalNumber = 0;
     int k = 0;
-
 
     for(int i = getLength(num) - 1; i >= 0; i--){
         int currentNumber;
@@ -106,8 +98,6 @@ int main() {
 
     int64_t n = convertToDecimal(c.base1, c.convertNumber);
     convertToDif(c.base2, n, c.base1);
-
-
 
     return 0;
 }
